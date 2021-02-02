@@ -14,7 +14,7 @@ const permission = {
       state.routers = constantRouterMap.concat(routers)
     },
     SET_SIDEBAR_ROUTERS: (state, routers) => {
-      state.sidebarRouters = routers
+      state.sidebarRouters = constantRouterMap.concat(routers)
     }
   },
   actions: {
@@ -62,7 +62,6 @@ function filterChildren(childrenMap) {
           }
           children.push(c)
         })
-        childrenMap.splice(index, 1)
         return
       }
     }
